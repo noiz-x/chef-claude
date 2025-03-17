@@ -50,7 +50,7 @@ main {
 }
 
 .add-ingredient-form > button {
-    font-family: Inter, 'san-serif';
+    font-family: 'Inter', san-serif;
     border-radius: 6px;
     border: none;
     background-color: #141413;
