@@ -1,7 +1,7 @@
 import React from "react"
 
 const Main = () => {
-  const [ingredients, setingredients] = React.useState(["chicken", "amala", "tomatoes"])
+  const [ingredients, setIngredients] = React.useState([])
 
   const ingredientsListItems = ingredients.map(ingredient => <li key={ingredient}>{ingredient}</li>)
 
@@ -9,8 +9,7 @@ const Main = () => {
     event.preventDefault()
     const formData = new FormData(event.currentTarget)
     const newIngredient = formData.get("ingredient")
-    setingredients([...ingredients, newIngredient])
-    // setingredients([...ingredients, newIngredient])
+    setIngredients(initIngredients => [...initIngredients, newIngredient])
   }
 
   return (
